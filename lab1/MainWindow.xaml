@@ -1,0 +1,43 @@
+﻿<Window x:Class="MoneyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Денежное приложение" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="20">
+            <TextBlock Text="Денежное приложение" FontSize="20" FontWeight="Bold" Margin="0 0 0 20"/>
+            <TextBlock Text="Текущие деньги:" Margin="0 0 0 10"/>
+            <TextBox x:Name="txtMoney" IsReadOnly="True" Margin="0 0 0 10"/>
+            <TextBlock Text="Добавить деньги:" Margin="0 0 0 5"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtAddAmount" Width="100" Margin="0 0 10 0"/>
+                <Button Content="Добавить" Click="AddMoney_Click"/>
+                <TextBlock Text="Введите номинал куппюры затем нажмите кнопку"/>
+            </StackPanel>
+            <TextBlock Text="Вычесть деньги:" Margin="0 0 0 5"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtSubtractAmount" Width="100" Margin="0 0 10 0"/>
+                <Button Content="Вычесть" Click="SubtractMoney_Click"/>
+                <TextBlock Text="Введите номинал куппюры затем нажмите кнопку"/>
+            </StackPanel>
+            <TextBlock Text="Разделить деньги на:" Margin="0 10 0 5"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtDivideBy" Width="100" Margin="0 0 10 0"/>
+                <Button Content="Разделить" Click="DivideMoney_Click"/>
+                <TextBlock Text="Введите номинал куппюры затем нажмите кнопку (Делится кол-во)"/>
+            </StackPanel>
+            <TextBlock Text="Умножить деньги на:" Margin="0 10 0 5"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtMultiplyBy" Width="100" Margin="0 0 10 0"/>
+                <Button Content="Умножить" Click="MultiplyMoney_Click"/>
+                <TextBlock Text="Введите номинал куппюры затем нажмите кнопку"/>
+            </StackPanel>
+            <TextBlock Text="Сравнить с другими деньгами:" Margin="0 20 0 5"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtCompareAmount" Width="100" Margin="0 0 10 0"/>
+                <Button Content="Сравнить" Click="CompareMoney_Click"/>
+                <TextBlock Text="Введите сумму за прошлый месяц затем нажмите кнопку"/>
+            </StackPanel>
+            <TextBlock x:Name="txtComparisonResult" Margin="0 5"/>
+        </StackPanel>
+    </Grid>
+</Window>
